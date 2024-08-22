@@ -1,0 +1,62 @@
+{
+  "name": "@amzn/webgpu-captions-demo-stack",
+  "version": "1.0.0",
+  "description": "Amazon Interactive Video Service WebGPU Captions Demo Stack",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tsc --project ./",
+    "cdk": "cdk",
+    "bootstrap": "BOOTSTRAP=true cdk bootstrap",
+    "deploy": "cdk deploy --all",
+    "deploy:backend": "cdk deploy --all -c stackType=backend",
+    "deploy:website": "cdk deploy --all -c stackType=website",
+    "destroy:backend": "cdk destroy -c stackType=backend",
+    "destroy:website": "cdk destroy -c stackType=website",
+    "local": "sam local start-api -t ./cdk.out/AmazonIVSWebGPUCaptionsDemoBackendStack.template.json"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.136",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "aws-cdk": "^2.133.0",
+    "aws-lambda": "^1.0.7",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-formatjs": "^4.12.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-lodash": "^7.4.0",
+    "eslint-plugin-markdown": "^4.0.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "jest": "^29.7.0",
+    "tsx": "^4.17.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ivs": "^3.535.0",
+    "@aws-sdk/client-ivs-realtime": "^3.535.0",
+    "@aws-sdk/client-ivschat": "^3.535.0",
+    "@aws-sdk/client-lambda": "^3.536.0",
+    "aws-cdk-lib": "^2.133.0",
+    "constructs": "^10.3.0",
+    "prompts": "^2.4.2",
+    "source-map-support": "^0.5.21",
+    "uuid": "^9.0.1"
+  }
+}
