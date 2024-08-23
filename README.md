@@ -1,13 +1,15 @@
 # Amazon IVS WebGPU Captions Demo
 
-A demo web application intended as an educational tool to demonstrate how you can add captions to a Amazon IVS Real-time and Low-latency streams using [transformers.js](https://github.com/xenova/transformers.js) and [WebGPU](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API).
+A demo web application that showcases state-of-the-art client-side transcription, with everything running directly in your browser. By leveraging [transformers.js](https://github.com/xenova/transformers.js) and [ONNX Runtime Web](https://github.com/microsoft/onnxruntime), this demo enables [WebGPU](https://github.com/gpuweb/gpuweb)-accelerated real-time in-browser transcription for Amazon IVS Low-latency and Real-time streams.
 
 ![A video with captioned subtitles](./app-screenshot.png)
 
-**This project is intended for education purposes only and not for production usage.**
+> [!WARNING]  
+> This is an experimental demo designed exclusively for educational purposes. By using this solution, you understand and accept its risks and limitations.
 
 ## Prerequisites
 
+- A [WebGPU](https://github.com/gpuweb/gpuweb) capable device.
 - [NodeJS](https://nodejs.org/) `v20.10.0` and Node package manager (npm).
   - If you have [node version manager](https://github.com/nvm-sh/nvm) installed, run `nvm use` to sync your node version with this project.
 - `API_URL` from the deployed serverless infrastructure for this demo.
