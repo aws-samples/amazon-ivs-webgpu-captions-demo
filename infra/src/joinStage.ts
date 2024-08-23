@@ -1,12 +1,12 @@
 import { ParticipantToken } from "@aws-sdk/client-ivs-realtime";
 import type { ParticipantTokenCapability } from "@aws-sdk/client-ivs-realtime";
 import { createStageToken } from "sdk/realtime";
-import { StageResponse, UserAttributes } from "./types";
+import { UserAttributes } from "./types";
 import { ErrorWithCode } from "../lambda/util";
 
 /**
- * A function that creates creates a stage token and chat token for the
- * stage and room associated with the provided `sessionId`
+ * A function that creates creates a stage token for the
+ * stage associated with the provided `stageArn`
  */
 
 async function joinStage(

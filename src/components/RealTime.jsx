@@ -173,15 +173,15 @@ function RealTime() {
         </>
       )}
       {stageJoined && participants.size < 1 && (
-        <div className='w-full h-full flex justify-center items-center px-2 text-uiText'>
+        <div className='w-full h-full flex justify-center items-center px-2 text-neutral-300'>
           <div className='flex flex-col items-center justify-start text-center gap-1 max-w-[580px] w-full select-none'>
             <LightningSlash
-              size={64}
+              size={48}
               weight='regular'
-              className='text-uiText mb-4'
+              className='text-current mb-4'
             />
             <h2 className='font-bold text-2xl'>Stream offline</h2>
-            <p className='text-uiText/50 text-lg text-balance mb-4'>
+            <p className='text-neutral-300/50 text-lg text-balance mb-4'>
               The stream is offline. Use a publisher token and use it to stream
               content to this stage.
             </p>

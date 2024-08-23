@@ -1,6 +1,7 @@
 # Amazon IVS WebGPU Captions Demo
 
-A demo web application that showcases state-of-the-art client-side transcription, with everything running directly in your browser. By leveraging [transformers.js](https://github.com/xenova/transformers.js) and [ONNX Runtime Web](https://github.com/microsoft/onnxruntime), this demo enables [WebGPU](https://github.com/gpuweb/gpuweb)-accelerated real-time in-browser transcription for Amazon IVS Low-latency and Real-time streams.
+A demo web application that showcases state-of-the-art client-side transcription, with everything running directly in your browser. By leveraging [Transformers.js
+](https://github.com/xenova/transformers.js) and [ONNX Runtime Web](https://github.com/microsoft/onnxruntime), this demo enables [WebGPU](https://github.com/gpuweb/gpuweb)-accelerated real-time in-browser transcription for Amazon IVS Low-latency and Real-time streams.
 
 ![A video with captioned subtitles](./app-screenshot.png)
 
@@ -46,6 +47,26 @@ The following command will deploy the client website to a public cloudfront url.
 ### Replace the low-latency IVS stream
 
 Replace the `PLAYBACK_URL` in [src/constants.js](./src/constants.js#L3) with your IVS Playback URL.
+
+### Customize the available models
+
+Modify the `SAMPLE_MODELS` in [src/constants.js](./src/constants.js#L13) to add or remove the models shown in the UI. Additional models may be found in the [Hugging Face ONNX Community](https://huggingface.co/onnx-community).
+
+```
+{
+  label: 'Model name'
+  description: 'A short description of the model.',
+  value: 'huggingface_model_name', // for example, 'onnx-community/whisper-tiny.en'
+  sizeInBytes: Model size,
+  modelOptions: {
+    dtype: {
+      encoder_model: 'q4', // 'q4' or 'fp32' or 'fp16'
+      decoder_model_merged: 'q4', // 'q4' or 'fp32' ('fp16' is broken)
+    },
+    device: 'webgpu', // or 'wasm'
+  },
+},
+```
 
 ## Known issues and limitations
 
