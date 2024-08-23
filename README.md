@@ -60,8 +60,8 @@ Modify the `SAMPLE_MODELS` in [src/constants.js](./src/constants.js#L13) to add 
   sizeInBytes: Model size,
   modelOptions: {
     dtype: {
-      encoder_model: 'q4', // 'q4' or 'fp32' or 'fp16'
-      decoder_model_merged: 'q4', // 'q4' or 'fp32' ('fp16' is broken)
+      encoder_model: 'q4', // 'q4' or 'q8' or 'fp16 or 'fp32' (values may not work with all models)
+      decoder_model_merged: 'q4', // 'q4' or 'q8' or 'fp16 or 'fp32' (values may not work with all models)
     },
     device: 'webgpu', // or 'wasm'
   },
