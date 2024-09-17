@@ -42,7 +42,7 @@ For more details, review the [Amazon IVS WebGPU Captions Demo Serverless Infrast
 
 The following command will deploy the client website to a public cloudfront url.
 
-1. Run: `npm deploy:website`
+1. Run: `npm run deploy:website`
 
 ### Replace the low-latency IVS stream
 
