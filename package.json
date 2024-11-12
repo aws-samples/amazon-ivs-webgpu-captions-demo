@@ -22,7 +22,7 @@
     "@headlessui/react": "^2.1.1",
     "@phosphor-icons/react": "^2.1.7",
     "@xenova/transformers": "github:xenova/transformers.js#v3",
-    "amazon-ivs-web-broadcast": "^1.14.0",
+    "amazon-ivs-web-broadcast": "^1.18.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.23",
     "pretty-bytes": "^6.1.1",
