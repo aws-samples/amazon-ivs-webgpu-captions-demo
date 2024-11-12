@@ -42,7 +42,7 @@ For more details, review the [Amazon IVS WebGPU Captions Demo Serverless Infrast
 
 The following command will deploy the client website to a public cloudfront url.
 
-1. Run: `npm deploy:website`
+1. Run: `npm run deploy:website`
 
 ### Replace the low-latency IVS stream
 
@@ -60,8 +60,8 @@ Modify the `SAMPLE_MODELS` in [src/constants.js](./src/constants.js#L13) to add 
   sizeInBytes: Model size,
   modelOptions: {
     dtype: {
-      encoder_model: 'q4', // 'q4' or 'fp32' or 'fp16'
-      decoder_model_merged: 'q4', // 'q4' or 'fp32' ('fp16' is broken)
+      encoder_model: 'q4', // 'q4' or 'q8' or 'fp16 or 'fp32' (values may not work with all models)
+      decoder_model_merged: 'q4', // 'q4' or 'q8' or 'fp16 or 'fp32' (values may not work with all models)
     },
     device: 'webgpu', // or 'wasm'
   },
@@ -72,6 +72,8 @@ Modify the `SAMPLE_MODELS` in [src/constants.js](./src/constants.js#L13) to add 
 
 - The application is meant for demonstration purposes and **not** for production use.
 - This application is only tested and supported on browsers and devices that support WebGPU. Other browsers and devices, including mobile browsers and smartphones, may work with this tool, but are not officially supported at this time.
+- Muting a low-latency video will stop captions from being generated. Real-time videos do not have this issue.
+- In some cases, the application may experience a memory leak (seems related to https://github.com/xenova/transformers.js/issues/860)
 
 ## About Amazon IVS
 
