@@ -4,7 +4,7 @@ import {
   WhisperForConditionalGeneration,
   TextStreamer,
   full,
-} from '@xenova/transformers';
+} from '@huggingface/transformers';
 import {
   DEFAULT_MODEL_OPTIONS,
   MAX_NEW_TOKENS,
