@@ -73,7 +73,6 @@ Modify the `SAMPLE_MODELS` in [src/constants.js](./src/constants.js#L13) to add 
 - The application is meant for demonstration purposes and **not** for production use.
 - This application is only tested and supported on browsers and devices that support WebGPU. Other browsers and devices, including mobile browsers and smartphones, may work with this tool, but are not officially supported at this time.
 - Muting a low-latency video will stop captions from being generated. Real-time videos do not have this issue.
-- In some cases, the application may experience a memory leak (seems related to https://github.com/xenova/transformers.js/issues/860)
 
 ## About Amazon IVS
 

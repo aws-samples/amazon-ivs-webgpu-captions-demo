@@ -20,7 +20,7 @@
     "@aws-sdk/client-cloudformation": "^3.629.0",
     "@generouted/react-router": "^1.19.6",
     "@headlessui/react": "^2.1.1",
-    "@huggingface/transformers": "^3.0.0",
+    "@huggingface/transformers": "^3.7.6",
     "@phosphor-icons/react": "^2.1.7",
     "amazon-ivs-web-broadcast": "^1.29.0",
     "clsx": "^2.1.1",
