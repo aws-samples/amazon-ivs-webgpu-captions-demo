@@ -49,10 +49,10 @@
     "typescript": "^5.4.3"
   },
   "dependencies": {
-    "@aws-sdk/client-ivs": "^3.535.0",
-    "@aws-sdk/client-ivs-realtime": "^3.535.0",
-    "@aws-sdk/client-ivschat": "^3.535.0",
-    "@aws-sdk/client-lambda": "^3.536.0",
+    "@aws-sdk/client-ivs": "^3.1004.0",
+    "@aws-sdk/client-ivs-realtime": "^3.1004.0",
+    "@aws-sdk/client-ivschat": "^3.1004.0",
+    "@aws-sdk/client-lambda": "^3.1004.0",
     "aws-cdk-lib": "^2.189.1",
     "constructs": "^10.3.0",
     "prompts": "^2.4.2",
